@@ -1,0 +1,19 @@
+---
+import CategoryCard from './CategoryCard.astro';
+import NewArrivals from './NewArrivals.astro';
+import './CollectionSection.css';
+const categories = [
+  { name: 'Ropa', detail: 'Para llevar tu serie favorita a cualquier lugar.', className: 'clothing', image: '/ropa.webp', imageAlt: 'Ilustración de una camiseta de estilo anime con detalles inspirados en Cusco.' },
+  { name: 'Mangas', detail: 'Historias para leer, releer y compartir.', className: 'manga', image: '/manga.webp', imageAlt: 'Ilustración de una persona leyendo un manga en un ambiente inspirado en Cusco.' },
+  { name: 'Accesorios', detail: 'Pequeños detalles para tu colección.', className: 'accessories', image: '/accesorios.webp', imageAlt: 'Ilustración de una mochila, llaveros y otros accesorios de estilo anime.' },
+];
+---
+<section class="collection section-wrap" id="coleccion" aria-labelledby="collection-title">
+  <div class="section-heading">
+    <div><p class="section-intro">Encuentra lo tuyo</p><h2 id="collection-title">Historias que salen<br />de la pantalla.</h2></div>
+    <p>Explora las categorías de la tienda. Escríbenos para conocer los productos disponibles.</p>
+  </div>
+  <div class="category-grid">{categories.map((category) => <CategoryCard {...category} />)}</div>
+  <p class="collection-disclaimer">Las imágenes ilustran categorías; consulta los productos disponibles.</p>
+  <NewArrivals />
+</section>

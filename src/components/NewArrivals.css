@@ -1,0 +1,7 @@
+.new-arrivals{display:flex;align-items:center;justify-content:space-between;gap:30px;margin-top:42px;padding:30px 36px;position:relative;background:var(--pale-lilac);border-left:6px solid var(--maize)}
+.new-arrivals::after{content:'';position:absolute;top:0;right:0;width:18px;height:18px;background:var(--paper);clip-path:polygon(0 0,100% 0,100% 100%)}
+.new-arrivals .section-intro{margin-bottom:5px}
+.new-arrivals h3{margin-bottom:5px;font-size:27px;letter-spacing:-.04em}
+.new-arrivals p:last-child{margin-bottom:0;color:var(--muted);font-size:13px}
+.new-arrivals .button{flex-shrink:0}
+@media(max-width:720px){.new-arrivals{display:block;padding:26px}.new-arrivals .button{margin-top:22px}}

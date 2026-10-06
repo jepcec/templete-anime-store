@@ -1,11 +1,23 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import HeroSection from '../components/HeroSection.astro';
+import PatternBand from '../components/PatternBand.astro';
+import CollectionSection from '../components/CollectionSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Anime Store Cusco | Ropa, mangas y accesorios anime" description="Descubre ropa, mangas y accesorios anime en Cusco. Conoce nuestras categorías y consulta cómo encontrarnos.">
+  <SiteHeader />
+  <main id="inicio">
+    <HeroSection />
+    <PatternBand />
+    <CollectionSection />
+    <AboutSection />
+    <ContactSection />
+  </main>
+  <SiteFooter />
 </Layout>

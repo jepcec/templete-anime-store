@@ -1,0 +1,15 @@
+---
+import ContactLink from './ContactLink.astro';
+import './CategoryCard.css';
+interface Props { name: string; detail: string; className: string; image: string; imageAlt: string }
+const { name, detail, className, image, imageAlt } = Astro.props;
+---
+<article class={`category-card ${className}`}>
+  <div class="category-art">
+    <img src={image} alt={imageAlt} width="1254" height="1254" loading="lazy" decoding="async" />
+  </div>
+  <div class="category-content">
+    <h3>{name}</h3><p>{detail}</p>
+    <ContactLink subject={name} />
+  </div>
+</article>

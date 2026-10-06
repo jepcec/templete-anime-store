@@ -1,0 +1,16 @@
+---
+import ContactLink from './ContactLink.astro';
+import { contact } from '../lib/contact';
+import './ContactSection.css';
+---
+<section class="contact" id="contacto" aria-labelledby="contact-title">
+  <div class="contact-inner section-wrap">
+    <div class="contact-heading"><p class="section-intro">Hablemos</p><h2 id="contact-title">¿Buscas algo<br />en especial?</h2><p>Consúltanos por ropa, mangas o accesorios. También puedes preguntar cómo llegar a la tienda.</p></div>
+    <div class="contact-panel">
+      <div class="contact-row"><span>WhatsApp</span><strong>{contact.hasWhatsapp ? contact.configuredNumber : '+51 000 000 000'}</strong>{!contact.hasWhatsapp && <small>Número de ejemplo · contacto por confirmar</small>}</div>
+      <div class="contact-row"><span>Ubicación</span><strong>Cusco, Perú</strong><small>Dirección exacta por confirmar</small></div>
+      <div class="contact-row"><span>Horario</span><strong>Por confirmar</strong></div>
+      {contact.hasWhatsapp ? <ContactLink className="button button-primary contact-button" /> : <p class="contact-pending">Publicaremos el contacto y la dirección cuando estén confirmados.</p>}
+    </div>
+  </div>
+</section>

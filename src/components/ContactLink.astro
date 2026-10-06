@@ -1,0 +1,6 @@
+---
+import { contact } from '../lib/contact';
+interface Props { className?: string; subject?: string }
+const { className, subject } = Astro.props;
+---
+<a class={className} href={contact.href} target={contact.target} rel={contact.rel} aria-label={subject ? `${contact.label} sobre ${subject}` : undefined}>{contact.label}<span aria-hidden="true">↗</span></a>

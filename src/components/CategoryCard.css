@@ -1,0 +1,13 @@
+.category-card{--card-tint:var(--lilac);display:flex;flex-direction:column;overflow:hidden;background:#fff}
+.category-card.clothing{--card-tint:var(--sakura)}.category-card.manga{--card-tint:var(--maize)}.category-card.accessories{--card-tint:var(--sky)}
+.category-art{height:clamp(300px,27vw,380px);position:relative;background:var(--card-tint)}
+.category-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.category-content{background:#fff;margin:0;padding:24px 36px 36px;min-height:164px;position:relative}
+.category-content::before{content:'';position:absolute;left:0;right:0;top:-12px;height:12px;background:#fff;clip-path:polygon(0 100%,0 50%,16% 50%,16% 0,37% 0,37% 50%,68% 50%,68% 0,84% 0,84% 50%,100% 50%,100% 100%)}
+.category-content h3{font-size:30px;letter-spacing:-.04em;margin-bottom:5px}
+.category-content p{color:var(--muted);font-size:13px;line-height:1.45;margin-bottom:19px}
+.category-content a{font-size:13px;font-weight:800;text-decoration-thickness:1px;text-underline-offset:4px}
+.category-content a:hover{color:var(--plum)}
+.category-content a span{margin-left:18px}
+@media(max-width:1000px){.category-content{padding:19px 24px 28px}}
+@media(max-width:720px){.category-art{height:auto;aspect-ratio:1}.category-content{min-height:0}}

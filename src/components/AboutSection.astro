@@ -1,0 +1,15 @@
+---
+import ContactLink from './ContactLink.astro';
+import './AboutSection.css';
+---
+<section class="about" id="nosotros" aria-labelledby="about-title">
+  <div class="about-inner section-wrap">
+    <div class="about-graphic" aria-hidden="true"><span class="about-sun"></span><span class="about-book about-book-one"></span><span class="about-book about-book-two"></span><span class="about-book about-book-three"></span><span class="about-spark">✳</span></div>
+    <div class="about-copy">
+      <p class="section-intro">La tienda</p>
+      <h2 id="about-title">Tu afición tiene<br />un lugar en Cusco.</h2>
+      <p>Anime Store Cusco reúne ropa, mangas y accesorios para fans que disfrutan descubrir algo nuevo. Si buscas un artículo en particular, cuéntanos cuál es y consulta la disponibilidad.</p>
+      <ContactLink className="button button-light" />
+    </div>
+  </div>
+</section>

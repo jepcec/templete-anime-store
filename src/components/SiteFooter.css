@@ -1,0 +1,9 @@
+.site-footer{background:var(--ink);color:#fff;position:relative}
+.site-footer::before{content:'';position:absolute;top:0;left:0;right:0;height:24px;background:var(--paper);clip-path:polygon(0 0,100% 0,100% 50%,88% 50%,88% 100%,68% 100%,68% 25%,44% 25%,44% 100%,20% 100%,20% 50%,0 50%);pointer-events:none}
+.footer-inner{width:min(100% - 64px,1240px);margin:auto;min-height:90px;display:flex;align-items:center;gap:25px}
+.footer-brand{font:700 17px 'Chakra Petch',sans-serif;text-decoration:none;white-space:nowrap}
+.footer-brand span{color:var(--maize)}
+.footer-inner p{margin:0 auto 0 0;color:var(--lilac);font-size:12px}
+.footer-inner>a:last-child{font-size:12px;text-decoration:none}
+.site-footer a:hover{color:var(--maize)}
+@media(max-width:720px){.footer-inner{width:min(100% - 36px,540px)} .footer-inner{flex-wrap:wrap;padding-block:25px;gap:12px}.footer-inner p{width:100%;order:3}}
